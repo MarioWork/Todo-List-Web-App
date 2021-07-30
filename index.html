@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="container">
+            <h1 class="title">Todo List App</h1>
+            <div class="input-container">
+                <input id="taskDescription" class="input-class" type="text" placeholder="Add your task..." />
+                <button id="addTaskBtn" class="add-button">+</button>
+            </div>
+            <ul id="taskList" class="list">
+                <li class="list-item">
+                    <p class="task-title">Isto é uma task</p>
+                    <button class="task-delete-button">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </li>
+                <li class="list-item">
+                    <p class="task-title">Isto é uma task</p>
+                    <button class="task-delete-button">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </li>
+                <li class="list-item">
+                    <p class="task-title">Isto é uma task</p>
+                    <button class="task-delete-button">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="bottom-container">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
