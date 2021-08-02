@@ -1,11 +1,11 @@
-
-
 var taskList = document.getElementById('taskList');
 var addTaskBtn = document.getElementById('addTaskBtn');
 var inputText = document.getElementById('taskDescription');
+var filter = document.getElementById('filterTasks');
 
 addTaskBtn.addEventListener("click", addNewTask);
 taskList.addEventListener("click", checkCompleteOrDelete);
+filter.addEventListener("click",filterList);
 
 function addNewTask() {
 
@@ -37,6 +37,7 @@ function addNewTask() {
         //Add the list item to the list
         taskList.appendChild(li);
     }
+    
 }
 
 function checkCompleteOrDelete(e) {
@@ -53,4 +54,13 @@ function checkCompleteOrDelete(e) {
             listItemParent.remove();
         });
     }
+}
+
+function filterList(e){
+
+   
+   
+
+    
+    
 }

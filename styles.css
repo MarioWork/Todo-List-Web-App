@@ -23,7 +23,8 @@
 }
 
 .container{
-    max-width: 50%;
+    max-width: 80%;
+    min-width: 80%;
     background-color: white;
     padding: 5em;
     border-radius: 1rem;
@@ -40,25 +41,31 @@
     margin-top: 1em;
     margin-bottom: 1em;
     display: flex;
-    justify-content: space-between;
 }
 
 .input-class{
-    min-width: 78%;
-    padding:  10px 20px;
+    min-width: 50%;
+    padding: 10px 20px;
     margin-right: 0.3rem;
     transition-duration: 0.3s;
     font-size: 1em;
 }
 
 .add-button{
-    min-width: 19%;
+    min-width: 20%;
     background-color: transparent;
     color:black;
     border: 1px solid black;
     cursor: pointer;
     transition-duration: 0.2s;
     font-size: 2rem;
+    margin-right: 0.3rem;
+}
+
+.custom-select{
+    min-width: 28.5%;
+    padding: 1em;
+    font-size: 1em;
 }
 
 .add-button:hover{
@@ -98,20 +105,20 @@
 .task-delete-button{
     min-width: 20%;
     min-height: 100%;
-    background-color: red;
-    color:white;
+    background-color: white;
+    color:red;
     cursor: pointer;
-    border: none;
     transition-duration: 0.4s;
     font-size: 1rem;
-    border: 1px solid var(--light-gray);
+    border: 1px solid red;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
 
 .task-delete-button:hover{
-    font-size: 1.5em;
+    color: white;
+    background-color: red;
 }
 
 .task-completed{
@@ -130,5 +137,6 @@
 .fa-trash{
     pointer-events: none;
 }
+
 
 
