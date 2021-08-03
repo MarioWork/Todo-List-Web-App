@@ -5,7 +5,7 @@ var filter = document.getElementById('filterTasks');
 
 addTaskBtn.addEventListener("click", addNewTask);
 taskList.addEventListener("click", checkCompleteOrDelete);
-filter.addEventListener("click",filterList);
+filter.addEventListener("click", filterList);
 
 function addNewTask() {
 
@@ -37,12 +37,12 @@ function addNewTask() {
         //Add the list item to the list
         taskList.appendChild(li);
     }
-    
+
 }
 
 function checkCompleteOrDelete(e) {
     const listItem = e.target;
-    const listItemParent =  listItem.parentElement;
+    const listItemParent = listItem.parentElement;
 
     if (listItem.classList[0] == 'task-title') {
         listItemParent.classList.toggle('task-completed');
@@ -50,17 +50,36 @@ function checkCompleteOrDelete(e) {
 
     } else if (listItem.classList[0] == 'task-delete-button') {
         listItemParent.classList.add('task-removed');
-        listItemParent.addEventListener('transitionend',function(){
+        listItemParent.addEventListener('transitionend', function () {
             listItemParent.remove();
         });
     }
 }
 
-function filterList(e){
+function filterList(e) {
+    var selected = e.target.value;
 
-   
-   
+     if (selected == 0) { //All
+         taskList.childNodes.forEach(element => {
+             element.style.display = "flex";
+         });
+     } else if (selected == 1) { //Completed
+         taskList.childNodes.forEach(element => {
+             if (!element.classList.contains("task-completed")) {
+                 element.style.display = "none";
+             } else {
+                 element.style.display = "flex";
+             }
+         });
+     } else if (selected == 2) { //Uncompleted
+         taskList.childNodes.forEach(element => {
+             if (element.classList.contains("task-completed")) {
+                 element.style.display = "none";
+             } else {
+                 element.style.display = "flex";
+             }
+         });
+     }
 
-    
-    
+
 }
